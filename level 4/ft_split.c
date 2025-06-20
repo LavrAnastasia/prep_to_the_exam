@@ -82,20 +82,20 @@ char **ft_split (const char *s, char c)
 
 
 #include <stdio.h>
+
 int	main(void)
 {
 	char	str[] = " hello world split test ";
 	char	c = ' ';
 	char	**result = ft_split(str, c);
+
 	if (result)
 	{
-	for (int	i = 0; result[i] != NULL; i++)
-	{
-						printf("%s\n", result[i]);
-
-	free(result[i]);
+		int i = 0;
+		while (result[i])
+		{
+			printf("%s\n", result[i]);
+			i++;
+		}
 	}
-	free(result);
-	}
-	return 0;
 }
