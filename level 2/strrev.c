@@ -6,11 +6,11 @@
 /*   By: alavrukh <alavrukh@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 14:05:07 by alavrukh          #+#    #+#             */
-/*   Updated: 2025/06/12 15:00:44 by alavrukh         ###   ########.fr       */
+/*   Updated: 2025/06/21 17:06:17 by alavrukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 
 char    *ft_strrev(char *str)
 {
@@ -20,21 +20,22 @@ char    *ft_strrev(char *str)
 
 	while (str[len])
 		len++;
-	while (i < len -1)
+
+	while (i < len / 2)
 	{
 		tmp = str[i];
-		str[i] = str[len - 1];
-		str[len - 1] = tmp;
-		len--;
+		str[i] = str[len - 1 - i];
+		str[len - 1 - i] = tmp;
 		i++;
 	}
-	return(str);
+
+	return (str);
 }
 
-int main ()
+/* int main ()
 {
 	char s[] = "HelloWorld";
 	ft_strrev(s);
 	printf("%s\n", s);
 	return (0);
-}
+} */
