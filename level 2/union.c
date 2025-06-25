@@ -46,6 +46,9 @@ void ft_union(char *s1, char *s2)
 
 int main(int argc, char **argv)
 {
+	argc = 3;
+	argv[1] = "mama";
+	argv[2] = "papa";
 	if (argc != 3)
 	{
 		write(1, "\n", 1);

@@ -16,8 +16,10 @@
 				str[i] = str[i] + 1;
 
 				else if (str[i] == 'z' || str[i] == 'Z')
-				str[i] = str[i] - 25;
-			
+				{
+					str[i] = str[i] - 25;
+
+				}
 				write(1, &str[i], 1);
 				i++;
 		}

@@ -17,7 +17,7 @@ int main(int ac, char **av)
 	{
 		while (s2[j] && s2[j] != s1[i])
 			j++;
-		if (!s2[j]) // Если дошли до конца s2 и не нашли s1[i]
+		if (!s2[j])
 		{
 			write(1, "\n", 1);
 			return 0;
