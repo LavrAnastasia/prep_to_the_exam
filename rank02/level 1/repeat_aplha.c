@@ -3,15 +3,14 @@
 int main (int ac, char **av)
 {
 	int i = 0;
-	char *str;
-	int repeat;
-
-	str = av[1];
+	char *str = av[1];
 
 	if (ac == 2)
 	{
 		while (str[i])
 		{
+			int repeat = 1;
+			
 			if (str[i] >= 'a' && str[i] <= 'z')
 			repeat = str[i] - 'a' + 1;
 			else if (str[i] >= 'A' && str[i] <= 'Z')
